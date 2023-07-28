@@ -1,13 +1,14 @@
 import React from "react";
 import Navebar from "./Navebar";
 import Itemsslider from "./Itemsslider";
+import Testimonialslider from "./Testimonialslider";
 import { HiMiniArrowRight } from "react-icons/hi2";
 
 function Landingpage() {
   return (
     <>
     <section id="home">
-      <div className="relative flex justify-between flex-col max-sm:h-fit h-screen w-full bg-[#1b1107] max-sm:py-[3rem] py-[2rem] px-[7rem]">
+      <div className="relative flex justify-between flex-col max-sm:h-fit h-screen w-full bg-[#1b1107] max-sm:py-[3rem] max-sm:px-[4rem] py-[2rem] px-[7rem]">
         <Navebar />
         <div className="flex max-sm:flex-col max-sm:gap-[4rem] my-auto justify-between">
           <img
@@ -16,7 +17,7 @@ function Landingpage() {
             alt=""
           />
           <div className="flex z-20 flex-col max-sm:gap-[1.5rem] gap-[1rem] max-sm:w-full max-sm:mt-[5rem] w-[35rem] ">
-            <h1 className="max-sm:text-[11vw] max-sm:leading-[11.5vw] text-[5rem] leading-[5.5vw] font-fonts ">
+            <h1 className="max-sm:text-[11vw] max-sm:leading-[11.5vw] text-[5rem] leading-[5.5vw] font-fonts">
               Discover The <br /> Art Of Perfect <br />
               Coffee
             </h1>
@@ -30,8 +31,7 @@ function Landingpage() {
                 className="flex justify-center items-center max-sm:h-[4.5rem] max-sm:w-[15rem] max-sm:text-[1.5rem] h-[3.5rem] w-[11rem] text-[1.4rem] bg-white text-[#1b1107] border-[.1rem] border-white cursor-pointer"
               >
                 Order Now{" "}
-                <HiMiniArrowRight className="text-[2rem]"
-                 value={{ color: '#1b1107'}} />
+                <HiMiniArrowRight className="text-[2rem] text-red-600" />
               </div>
               <div
                 href="#"
@@ -74,7 +74,7 @@ function Landingpage() {
     <section id="about">
        <div className="flex flex-col max-sm:gap-[10rem] gap-[5rem] bg-[#e7d7bd] max-sm:py-[7rem] py-[8rem] px-[7rem]">
         <div className="flex max-sm:flex-col max-sm:gap-[5rem] gap-[20rem]">
-          <img className="max-sm:h-[42rem] h-[35rem]" src="/images/116519736b4e21508b7b4e35b0edd6bb.jpg" alt="" />
+          <img className="max-sm:h-[42rem] h-[35rem]" src="/images/Group 2.png" alt="" />
            <div className="flex flex-col max-sm:items-center justify-center gap-[2rem]">
              <h2 className="text-[#1b1107] font-fonts max-sm:text-[10.5vw] max-sm:leading-[11vw] max-sm:text-center text-[4.5rem] leading-[5vw]" >Coffee Heaven</h2>
              <p className="text-[#1b1107] max-sm:text-[1.7rem] max-sm:leading-[2.3rem] max-sm:text-center text-[1.3rem] font-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ex maxime ipsum quasi aut non vel, a aspernatur eligendi odit facere nulla laboriosam quam quae porro officia dicta praesentium voluptatibus!</p>
@@ -83,7 +83,7 @@ function Landingpage() {
           </div>
 
           <div className="flex max-sm:flex-col max-sm:gap-[5rem] gap-[20rem]">
-          <img className="max-sm:h-[42rem] h-[35rem] max-sm:order-[0] order-1" src="/images/116519736b4e21508b7b4e35b0edd6bb.jpg" alt="" />
+          <img className="max-sm:h-[42rem] h-[35rem] max-sm:order-[0] order-1" src="/images/Group 3.png" alt="" />
            <div className="flex flex-col max-sm:items-center justify-center gap-[2rem]">
              <h2 className="text-[#1b1107] font-fonts max-sm:text-[10.5vw] max-sm:leading-[11vw] max-sm:text-center text-[4.5rem] leading-[5vw]" >Jean's Coffee</h2>
              <p className="text-[#1b1107] max-sm:text-[1.7rem] max-sm:leading-[2.3rem] max-sm:text-center text-[1.3rem] font-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ex maxime ipsum quasi aut non vel, a aspernatur eligendi odit facere nulla laboriosam quam quae porro officia dicta praesentium voluptatibus!</p>
@@ -94,11 +94,34 @@ function Landingpage() {
     </section>
 
     <section id="menu">
-      <div className="bg-[#ddb288] flex flex-col max-sm:gap-[10rem] gap-[5rem] max-sm:py-[7rem] py-[8rem] px-[7rem]">
+      <div className="bg-[#ddb288] flex flex-col max-sm:gap-[10rem] gap-[5rem] max-sm:py-[7rem] py-[8rem] px-[6rem]">
         <div className="flex flex-col justify-center gap-[3rem] items-center">
           <h1 className="text-[#1b1107] font-fonts max-sm:text-[10.5vw] max-sm:leading-[11vw] max-sm:text-center text-[4.5rem] leading-[5vw]">Best Selling Items</h1>
           <p className="text-center text-[#1b1107] max-sm:text-[1.7rem] max-sm:leading-[2.3rem] max-sm:text-center text-[1.3rem] font-sans max-sm:w-full w-[60rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, eligendi quae incidunt commodi sequi porro molestiae. Quas, quia molestiae hic impedit et necessitatibus illo ullam quam explicabo deserunt harum sunt?</p>
           <Itemsslider/>
+        </div>
+      </div>
+    </section>
+
+    <section id="">
+      <div className="bg-[#e7d7bd] flex flex-col max-sm:gap-[10rem] gap-[5rem] max-sm:py-[7rem] py-[8rem] px-[6rem]">
+        <div className="flex flex-col justify-center gap-[12rem] items-center">
+          <h1 className="text-[#1b1107] font-fonts max-sm:text-[10.5vw] max-sm:leading-[11vw] max-sm:text-center text-[4.5rem] leading-[5vw]">What Our Customer Says</h1>
+          <Testimonialslider/>
+        </div>
+      </div>
+    </section>
+
+    <section id="">
+      <div className="bg-[#ddb288] flex flex-col max-sm:gap-[10rem] gap-[5rem] max-sm:py-[7rem] py-[8rem] px-[6rem]">
+        <div className=" flex max-sm:flex-col flow-row justify-center gap-[12rem] items-center">
+          <h1 className="w-[65rem] text-[#1b1107] font-fonts max-sm:text-[8vw] max-sm:leading-[8.5vw] max-sm:text-center text-[3.5rem] leading-[4vw]">Stay Up To Date On <br />All News And Offers.</h1>
+          <div className="">
+          <p className="text-center text-[#1b1107] max-sm:text-[1.7rem] max-sm:leading-[2.3rem] max-sm:text-center text-[1.3rem] font-sans ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, eligendi quae incidunt commodi sequi porro molestiae. Quas, quia molestiae hic </p>
+          <div>
+            <input type="text" className="bg-transparent" />
+          </div>
+          </div>
         </div>
       </div>
     </section>

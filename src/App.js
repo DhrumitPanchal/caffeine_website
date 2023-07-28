@@ -1,8 +1,12 @@
 import Landingpage from "./components/Landingpage";
 
+
+
+
 function App() {
   return (
-    <Landingpage/>
+    // <Landingpage/>
+    <h2>hello world</h2>
   );
 }
 

@@ -6,6 +6,7 @@ function Navebar() {
   return (
 
 
+
 <div className='flex justify-between items-center border-[.1rem] border-white max-sm:px-[2rem] px-[1.2rem]'>
   <h1 className='cursor-pointer max-sm:text-[3rem] text-[2.5rem] font-fonts'>Caffeine</h1>
   <ul className='list-none font-sans text-[1.2rem] max-sm:hidden'>
