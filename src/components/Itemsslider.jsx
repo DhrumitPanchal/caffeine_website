@@ -1,62 +1,135 @@
-import React from "react";
+import React, { Component } from "react";
 import Itemcard from "./Itemcard";
-import items from "./ItemsApi";
+import Slider from "react-slick";
+import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 
-function Itemsslider() {
-  return (
-    <>
-      <div
-        id="content"
-        className=" flex max-sm:gap-[5rem] gap-[4rem] max-sm:px-0 px-[1rem] scroll-smooth overflow-scroll w-full max-sm:snap-mandatory max-sm:snap-x "
-      >
-        <Itemcard items={items} />
-      </div>
-      <div className="flex gap-[2rem]">
-        <div className="flex justify-center items-center h-[4rem] w-[4rem] border-[.2rem] border-[#1b1107]"></div>
-        <div className="flex justify-center items-center h-[4rem] w-[4rem] border-[.2rem] border-[#1b1107]"></div>
-      </div>
-    </>
-  );
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return <div className="hidden" />;
 }
 
-export default Itemsslider
-// export default Itemsslider;
-// import React, { Component } from "react";
-// import Slider from "react-slick";
+export default class PreviousNextMethods extends Component {
+  constructor(props) {
+    super(props);
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+    this.state = {
+      carcoun: window.innerWidth > 450 ? 3 : 1,
+      cardots: window.innerWidth < 330 ? false : true,
+    };
+  }
 
-// export default class SimpleSlider extends Component {
-//   render() {
-//     const settings = {
-//       dots: true,
-//       infinite: true,
-//       speed: 500,
-//       slidesToShow: 1,
-//       slidesToScroll: 1
-//     };
-//     return (
-//       <div>
-//         <h2> Single Item</h2>
-//         <Slider {...settings}>
-//           <div>
-//             <h3>1</h3>
-//           </div>
-//           <div>
-//             <h3>2</h3>
-//           </div>
-          // <div>
-          //   <h3>3</h3>
-          // </div>
-          // <div>
-          //   <h3>4</h3>
-          // </div>
-          // <div>
-          //   <h3>5</h3>
-          // </div>
-          // <div>
-          //   <h3>6</h3>
-    //      </div>
-   //     </Slider>
-  //    </div>
-  //  );
- // }
-//}
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({ carcoun: window.innerWidth > 450 ? 3 : 1 });
+    this.setState({cardots: window.innerWidth < 330 ? false : true, });
+  };
+
+  next() {
+    this.slider.slickNext();
+  }
+  previous() {
+    this.slider.slickPrev();
+  }
+
+  render() {
+    const settings = {
+      dots: this.state.cardots,
+      infinite: true,
+      speed: 500,
+      slidesToShow: this.state.carcoun,
+      slidesToScroll: this.state.carcoun,
+      nextArrow: <SamplePrevArrow />,
+      prevArrow: <SamplePrevArrow />,
+    };
+    return (
+      <>
+        <div className="">
+          <div className="items-center flex">
+            <Slider
+              ref={(c) => (this.slider = c)}
+              {...settings}
+              className=" max-sm:w-[40rem] w-[90rem] "
+            >
+              <Itemcard
+                name={"Espresso"}
+                img={
+                  "https://i.pinimg.com/564x/1b/76/ae/1b76aea6fbb3ab5a6a3e767bcd05a0be.jpg"
+                }
+              />
+              <Itemcard
+                name={"Cappuccino"}
+                img={
+                  "https://i.pinimg.com/236x/e0/a8/07/e0a807700ee67200cb583f68c52de4c8.jpg"
+                }
+              />
+              <Itemcard
+                name={"Latte"}
+                img={
+                  "https://i.pinimg.com/236x/58/a7/b6/58a7b6a4cdccfc9ee7629bdcf98e42ac.jpg"
+                }
+              />
+              <Itemcard
+                name={"Americano"}
+                img={
+                  "https://i.pinimg.com/236x/22/83/bb/2283bb1062a5e06c4e7b67c2e5da8d54.jpg"
+                }
+              />
+              <Itemcard
+                name={"Mocha"}
+                img={
+                  "https://i.pinimg.com/564x/94/47/44/944744fafc801a5f2de37158c009a2c3.jpg"
+                }
+              />
+              <Itemcard
+                name={"Macchiato"}
+                img={
+                  "https://i.pinimg.com/564x/1a/a8/70/1aa8700a1ce81ef13911afd26f611286.jpg"
+                }
+              />
+              <Itemcard
+                name={"Iced Coffee"}
+                img={
+                  "https://i.pinimg.com/236x/94/47/44/944744fafc801a5f2de37158c009a2c3.jpg"
+                }
+              />
+              <Itemcard
+                name={"Cold Brew"}
+                img={
+                  "https://i.pinimg.com/564x/bc/76/bc/bc76bc6e3b77eb9dac13cf6861006b29.jpg"
+                }
+              />
+              <Itemcard
+                name={"Affogato"}
+                img={
+                  "https://i.pinimg.com/564x/8c/cf/c0/8ccfc0308b70f75255b47c4abb28f2bb.jpg"
+                }
+              />
+            </Slider>
+          </div>
+          <div className="flex justify-between my-auto mt-[6rem] mx-auto max-sm:mt-[6rem] max-sm:w-[15rem] w-[12rem]">
+            <button
+              className="button flex justify-center items-center max-sm:h-[5rem] max-sm:w-[5rem]  h-[4.5rem] w-[4.5rem] border-[.2rem] border-[#1b1107] bg-[#c5ad8c]"
+              onClick={this.previous}
+            >
+              <FiArrowLeft className="text-[2.5rem]" />
+            </button>
+            <button
+              className="button flex justify-center items-center max-sm:h-[5rem] max-sm:w-[5rem] h-[4.5rem] w-[4.5rem] border-[.2rem] bg-[#1b1107] border-[#1b1107] "
+              onClick={this.next}
+            >
+              <FiArrowRight className="text-[2.5rem] text-white" />
+            </button>
+          </div>
+        </div>
+      </>
+    );
+  }
+}

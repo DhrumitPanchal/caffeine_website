@@ -1,13 +1,9 @@
 import Landingpage from "./components/Landingpage";
-
-
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
-  return (
-    // <Landingpage/>
-    <h2>hello world</h2>
-  );
+  return <Landingpage />;
 }
 
 export default App;
