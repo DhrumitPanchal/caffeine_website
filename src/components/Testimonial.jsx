@@ -8,11 +8,11 @@ function Testimonial(props) {
       <div className="overflow-hidden absolute max-sm:-top-[7rem] -top-[5.5rem] bg-white max-sm:border-[.8rem] border-[.7rem] border-white max-sm:h-[14rem] max-sm:w-[14rem] h-[11rem] w-[11rem] rounded-full">
         <img src={props.img} alt="" />
       </div>
-      <p className="max-sm:mt-[8rem] mt-[6rem] text-[1rem text-center max-sm:text-[1.7rem] max-sm:leading-[2.3rem] max-sm:text-center text-[1.3rem] font-sans">
+      <p className="max-sm:mt-[8rem] mt-[6rem] text-[1rem text-center max-sm:text-[1.7rem] max-sm:leading-[2.3rem] max-sm:text-center text-[1.3rem] font-light font-sans">
         {props.review}
       </p>
       <div className="mt-[3rem] ">
-        <h2 className="max-sm:text-[2.5rem] text-[2rem] ">{props.name}</h2>
+        <h2 className="max-sm:text-[2.5rem] text-[2rem] font-light font-sans">{props.name}</h2>
       </div>
     </div>
     </div>

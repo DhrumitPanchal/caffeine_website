@@ -28,7 +28,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+#loder{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 50;
+    background-size: 30%;
+}
 @media only screen and (max-width: 450px) {
   html {
     font-size: 2vw;

@@ -14,7 +14,7 @@ export default class PreviousNextMethods extends Component {
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.state = {
-      carcoun: window.innerWidth > 450 ? 3 : 1,
+      carcoun: window.innerWidth >= 640 ? 3 : 1,
       cardots: window.innerWidth < 330 ? false : true,
     };
   }
@@ -28,7 +28,7 @@ export default class PreviousNextMethods extends Component {
   }
 
   handleResize = () => {
-    this.setState({ carcoun: window.innerWidth > 450 ? 3 : 1 });
+    this.setState({ carcoun: window.innerWidth >= 640 ? 3 : 1 });
     this.setState({cardots: window.innerWidth < 330 ? false : true, });
   };
 
@@ -85,7 +85,7 @@ export default class PreviousNextMethods extends Component {
               <Itemcard
                 name={"Mocha"}
                 img={
-                  "https://i.pinimg.com/564x/94/47/44/944744fafc801a5f2de37158c009a2c3.jpg"
+                  "https://i.pinimg.com/236x/93/aa/5d/93aa5d0cb7a25a6925f1bc4ee08bb4b7.jpg"
                 }
               />
               <Itemcard
