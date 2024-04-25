@@ -17,8 +17,8 @@ Caffeine is your digital gateway to a world of rich, aromatic coffee experiences
 Provide step-by-step instructions on how to set up the project locally. Include any dependencies that need to be installed and configuration steps.
 ```bash
 # Example installation steps
-git clone https://github.com/your-username/your-portfolio.git
-cd your-portfolio
+git clone https://github.com/DhrumitPanchal/caffeine_website
+cd caffeine_website
 npm install
 ```
     
